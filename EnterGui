@@ -1,0 +1,58 @@
+local EnterGui = Instance.new("ScreenGui")
+local EnterFrame = Instance.new("Frame")
+local EnterButton = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local UICorner_2 = Instance.new("UICorner")
+local NameAndVer = Instance.new("TextLabel")
+local UICorner_3 = Instance.new("UICorner")
+
+--Properties:
+
+EnterGui.Name = "EnterGui"
+EnterGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+EnterGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+EnterGui.ResetOnSpawn = false
+
+EnterFrame.Name = "EnterFrame"
+EnterFrame.Parent = EnterGui
+EnterFrame.BackgroundColor3 = Color3.fromRGB(210, 30, 255)
+EnterFrame.Position = UDim2.new(0.418181807, 0, 0.23788546, 0)
+EnterFrame.Size = UDim2.new(0.163636357, 0, 0.52422905, 0)
+
+EnterButton.Name = "EnterButton"
+EnterButton.Parent = EnterFrame
+EnterButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+EnterButton.Position = UDim2.new(0.129629627, 0, 0.789915979, 0)
+EnterButton.Size = UDim2.new(0.740740716, 0, 0.140056029, 0)
+EnterButton.Font = Enum.Font.SciFi
+EnterButton.Text = "Enter"
+EnterButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+EnterButton.TextScaled = true
+EnterButton.TextSize = 14.000
+EnterButton.TextWrapped = true
+
+UICorner.Parent = EnterButton
+
+UICorner_2.Parent = EnterFrame
+
+NameAndVer.Name = "NameAndVer"
+NameAndVer.Parent = EnterFrame
+NameAndVer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NameAndVer.Position = UDim2.new(0.0962962955, 0, 0.0700280145, 0)
+NameAndVer.Size = UDim2.new(0.803703725, 0, 0.19327727, 0)
+NameAndVer.Font = Enum.Font.SciFi
+NameAndVer.Text = "Bidar V1"
+NameAndVer.TextColor3 = Color3.fromRGB(0, 0, 0)
+NameAndVer.TextScaled = true
+NameAndVer.TextSize = 14.000
+NameAndVer.TextWrapped = true
+
+UICorner_3.Parent = NameAndVer
+
+
+
+
+EnterButton.MouseButton1Click:Connect(function()
+	EnterFrame.Visible = false
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/HanzGui/BidarGui/main/MainGui"))()
+end)
